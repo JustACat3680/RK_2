@@ -13,7 +13,7 @@ jobs:
     - name: Сборка
       run: cmake --build build --config Release
     - name: Сборка пакета
-      run: debuild -czf deb1.deb -C build .
+      run: debuild -b -us -uc deb1.deb -C build .
     - name: Создание релиза
       uses: softprops/action-gh-release@v2
       with:
